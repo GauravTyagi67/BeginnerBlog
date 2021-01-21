@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Blog Entries Column -->
+      <div class="col-md-8">
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+          <div class="card-header">
+            <h1><b>Login to your Account</b></h1>
+            <!-- <a href="#" class="btn btn-primary btn-sm">Read More &rarr;</a> -->
+          </div>
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button class="btn btn-primary"type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+        
+{% endblock %}
